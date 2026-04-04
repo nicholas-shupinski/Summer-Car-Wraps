@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Business Name</title>
+    <meta name="description" content="Contact Business Name for a quote." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"></span>
+          <span class="brand__text">Business Name</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav__link" href="index.html">Home</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="gallery.html">Work</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link nav__link--active" href="contact.html">Contact</a>
+        </nav>
+
+        <button class="nav-toggle btn btn--ghost btn--sm" type="button" aria-label="Open menu">
+          Menu
+        </button>
+      </div>
+    </header>
+
+    <main class="section section--cta">
+      <div class="container cta">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h1 class="h1">Request a quote</h1>
+          <p class="lead max-w-prose">
+            Share your goals, dimensions, timeline, and any inspiration links/photos.
+          </p>
+          <p class="muted mt-2">
+            Or call: <a class="link" href="tel:+11234567890">(123) 456-7890</a>
+          </p>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <div class="form__row">
+            <label class="field">
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Send</button>
+            <a class="btn btn--outline" href="tel:+11234567890">Call</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <p class="footer-title">Business Name</p>
+          <p class="muted text-sm">© <span id="year"></span></p>
+        </div>
+        <div class="footer-actions">
+          <a class="btn btn--outline btn--sm" href="services.html">Services</a>
+          <a class="btn btn--outline btn--sm" href="gallery.html">Work</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

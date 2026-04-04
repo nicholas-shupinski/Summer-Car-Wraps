@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work — Business Name</title>
+    <meta name="description" content="Recent work and projects." />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"></span>
+          <span class="brand__text">Business Name</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav__link" href="index.html">Home</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link nav__link--active" href="gallery.html">Work</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="btn btn--primary btn--sm" href="contact.html">Request Quote</a>
+        </nav>
+
+        <button class="nav-toggle btn btn--ghost btn--sm" type="button" aria-label="Open menu">
+          Menu
+        </button>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <p class="eyebrow">Work</p>
+        <h1 class="h1">Recent projects</h1>
+        <p class="lead max-w-prose">Swap images and captions per client.</p>
+
+        <div class="gallery">
+          <img src="assets/images/g1.jpg" alt="Project photo 1" loading="lazy" />
+          <img src="assets/images/g2.jpg" alt="Project photo 2" loading="lazy" />
+          <img src="assets/images/g3.jpg" alt="Project photo 3" loading="lazy" />
+          <img src="assets/images/g4.jpg" alt="Project photo 4" loading="lazy" />
+          <img src="assets/images/g5.jpg" alt="Project photo 5" loading="lazy" />
+          <img src="assets/images/g6.jpg" alt="Project photo 6" loading="lazy" />
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <p class="footer-title">Business Name</p>
+          <p class="muted text-sm">© <span id="year"></span></p>
+        </div>
+        <div class="footer-actions">
+          <a class="btn btn--primary btn--sm" href="contact.html">Request Quote</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>
