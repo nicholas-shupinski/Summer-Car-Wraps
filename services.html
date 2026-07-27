@@ -18,7 +18,15 @@
 
         <nav class="nav" aria-label="Primary navigation">
           <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link nav__link--active" href="services.html">Services</a>
+          <details class="nav__group">
+            <summary class="nav__link nav__link--active nav__group-toggle">Services</summary>
+            <div class="nav__dropdown" aria-label="Services submenu">
+              <a class="nav__dropdown-link" href="services.html#vinyl-wrapping">Vinyl Wrapping</a>
+              <a class="nav__dropdown-link" href="services.html#ppf">Paint Protection Film (PPF)</a>
+              <a class="nav__dropdown-link" href="services.html#window-tinting">Window Tinting</a>
+              <a class="nav__dropdown-link" href="services.html#ceramic-coating">Ceramic Coating</a>
+            </div>
+          </details>
           <a class="nav__link" href="gallery.html">Work</a>
           <a class="nav__link" href="about.html">About</a>
           <a class="btn btn--primary btn--sm" href="contact.html">Request Quote</a>
@@ -39,12 +47,10 @@
         </p>
 
         <div class="service-grid">
-          <div class="card service"><h3 class="h3">Service One</h3><p class="muted">Short description.</p></div>
-          <div class="card service"><h3 class="h3">Service Two</h3><p class="muted">Short description.</p></div>
-          <div class="card service"><h3 class="h3">Service Three</h3><p class="muted">Short description.</p></div>
-          <div class="card service"><h3 class="h3">Service Four</h3><p class="muted">Short description.</p></div>
-          <div class="card service"><h3 class="h3">Service Five</h3><p class="muted">Short description.</p></div>
-          <div class="card service"><h3 class="h3">Service Six</h3><p class="muted">Short description.</p></div>
+          <div id="vinyl-wrapping" class="card service"><h3 class="h3">Vinyl Wrapping</h3><p class="muted">Full vehicle wraps, partial accents, and custom finishes.</p></div>
+          <div id="ppf" class="card service"><h3 class="h3">Paint Protection Film (PPF)</h3><p class="muted">Clear protective film to guard paint from chips, scratches, and wear.</p></div>
+          <div id="window-tinting" class="card service"><h3 class="h3">Window Tinting</h3><p class="muted">Precision tinting for glare reduction, heat control, and added privacy.</p></div>
+          <div id="ceramic-coating" class="card service"><h3 class="h3">Ceramic Coating</h3><p class="muted">Long-lasting ceramic protection for shine, hydrophobic finish, and easier maintenance.</p></div>
         </div>
       </div>
     </main>

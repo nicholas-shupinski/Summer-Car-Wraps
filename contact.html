@@ -3,84 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact — Business Name</title>
-    <meta name="description" content="Contact Business Name for a quote." />
-    <link rel="stylesheet" href="styles.css" />
+    <title>Contact — Summer Car Wraps</title>
+    <meta name="description" content="Contact Summer Car Wraps for a quote on wraps, PPF, tinting, and detailing." />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
   </head>
 
   <body>
     <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="index.html">
-          <span class="brand__mark"></span>
-          <span class="brand__text">Business Name</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="services.html">Services</a>
-          <a class="nav__link" href="gallery.html">Work</a>
-          <a class="nav__link" href="about.html">About</a>
-          <a class="nav__link nav__link--active" href="contact.html">Contact</a>
-        </nav>
-
-        <button class="nav-toggle btn btn--ghost btn--sm" type="button" aria-label="Open menu">
-          Menu
-        </button>
-      </div>
+      <div data-include="assets/partials/header.html"></div>
     </header>
 
-    <main class="section section--cta">
-      <div class="container cta">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h1 class="h1">Request a quote</h1>
-          <p class="lead max-w-prose">
-            Share your goals, dimensions, timeline, and any inspiration links/photos.
-          </p>
-          <p class="muted mt-2">
-            Or call: <a class="link" href="tel:+11234567890">(123) 456-7890</a>
-          </p>
+    <main id="main">
+      <section class="section section--soft" style="margin-top: 158px;">
+        <div class="container">
+          <div class="contact-shell">
+            <div class="contact-card">
+              <p class="eyebrow">Contact</p>
+              <h1 class="h1">Let’s talk about your project</h1>
+              <p class="lead max-w-prose">
+                Share your vehicle goals, timeline, and inspiration so we can help you choose the right finish and service.
+              </p>
+
+              <ul class="contact-list">
+                <li>
+                  <strong>Call:</strong>
+                  <a class="link" href="tel:+11234567890">(123) 456-7890</a>
+                </li>
+                <li>
+                  <strong>Email:</strong>
+                  <a class="link" href="mailto:hello@summercarwraps.com">hello@summercarwraps.com</a>
+                </li>
+                <li>
+                  <strong>Visit:</strong>
+                  123 Main Street, Pottstown, PA
+                </li>
+              </ul>
+
+              <!-- <div class="contact-actions">
+                <a class="btn btn--primary" href="tel:+11234567890">Call Now</a>
+                <a class="btn btn--outline" href="gallery.html">View Work</a>
+              </div> -->
+            </div>
+
+            <iframe src="https://app.urable.com/form/2i8YxqyYC0DQMXGhwh88/kAUGdzOWaaW2R5qVlEpH" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="1200px" width="100%"></iframe>
+
+            <!-- <form class="form contact-form" action="#" method="post">
+              <div class="form__row">
+                <label class="field">
+                  <span>Name</span>
+                  <input name="name" type="text" autocomplete="name" required />
+                </label>
+                <label class="field">
+                  <span>Email</span>
+                  <input name="email" type="email" autocomplete="email" required />
+                </label>
+              </div>
+
+              <div class="form__row">
+                <label class="field">
+                  <span>Phone</span>
+                  <input name="phone" type="tel" autocomplete="tel" />
+                </label>
+                <label class="field">
+                  <span>Service</span>
+                  <input name="service" type="text" placeholder="Wrap, PPF, Tint, etc." />
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Message</span>
+                <textarea name="message" rows="7" required></textarea>
+              </label>
+
+              <div class="form__actions">
+                <button class="btn btn--primary" type="submit">Send Request</button>
+                <a class="btn btn--outline" href="mailto:hello@summercarwraps.com">Email Us</a>
+              </div>
+            </form> -->
+          </div>
         </div>
-
-        <form class="form" action="#" method="post">
-          <div class="form__row">
-            <label class="field">
-              <span>Name</span>
-              <input name="name" type="text" autocomplete="name" required />
-            </label>
-            <label class="field">
-              <span>Email</span>
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-          </div>
-
-          <label class="field">
-            <span>Message</span>
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-
-          <div class="form__actions">
-            <button class="btn btn--primary" type="submit">Send</button>
-            <a class="btn btn--outline" href="tel:+11234567890">Call</a>
-          </div>
-        </form>
-      </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <div>
-          <p class="footer-title">Business Name</p>
-          <p class="muted text-sm">© <span id="year"></span></p>
-        </div>
-        <div class="footer-actions">
-          <a class="btn btn--outline btn--sm" href="services.html">Services</a>
-          <a class="btn btn--outline btn--sm" href="gallery.html">Work</a>
-        </div>
-      </div>
-    </footer>
+    <div data-include="assets/partials/footer.html"></div>
 
+    <script src="assets/scripts/config.js"></script>
     <script src="assets/scripts/script.js"></script>
   </body>
 </html>

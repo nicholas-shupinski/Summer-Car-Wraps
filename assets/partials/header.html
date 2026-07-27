@@ -29,20 +29,29 @@
 <header class="site-header">
   <div class="header-row">
     <a class="brand" href="index.html" aria-label="{{businessName}} home">
-      <img class="brand__mark" aria-hidden="true" src="assets/images/summer-wraps_logo.jpg">
+      <img class="brand__mark" aria-hidden="true" src="assets/images/summer-wraps_logo.png">
       <!-- <span class="brand__text">{{businessName}}</span> -->
     </a>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <!-- <a class="nav__link nav__link--active" href="index.html">Home</a> -->
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Primary navigation">
       <a class="nav__link" href="about.html">About</a>
-      <a class="nav__link" href="services.html">Services</a>
+      <details class="nav__group">
+        <summary class="nav__link nav__group-toggle">Services</summary>
+        <div class="nav__dropdown" aria-label="Services submenu">
+          <a class="nav__dropdown-link" href="vinyl-wrapping.html">Vinyl Wrapping</a>
+          <a class="nav__dropdown-link" href="paint-protection-film.html">Paint Protection Film (PPF)</a>
+          <a class="nav__dropdown-link" href="window-tinting.html">Window Tinting</a>
+          <a class="nav__dropdown-link" href="services.html#ceramic-coating">Ceramic Coating</a>
+        </div>
+      </details>
       <a class="nav__link" href="gallery.html">Work</a>
       <a class="btn btn--primary btn--sm header__cta" href="{{primaryCtaHref}}">{{primaryCtaText}}</a>
     </nav>
-
-    <!-- <button class="nav-toggle btn btn--ghost btn--sm" type="button" aria-label="Open menu">
-      Menu
-    </button> -->
   </div>
 </header>

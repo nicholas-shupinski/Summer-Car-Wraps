@@ -3,62 +3,278 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work — Business Name</title>
-    <meta name="description" content="Recent work and projects." />
+    <title>Work — Summer Car Wraps</title>
+    <meta name="description" content="Browse recent work across vinyl wrapping, PPF, window tinting, and ceramic coating." />
     <link rel="stylesheet" href="assets/styles/styles.css" />
   </head>
 
   <body>
     <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="index.html">
-          <span class="brand__mark"></span>
-          <span class="brand__text">Business Name</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="services.html">Services</a>
-          <a class="nav__link nav__link--active" href="gallery.html">Work</a>
-          <a class="nav__link" href="about.html">About</a>
-          <a class="btn btn--primary btn--sm" href="contact.html">Request Quote</a>
-        </nav>
-
-        <button class="nav-toggle btn btn--ghost btn--sm" type="button" aria-label="Open menu">
-          Menu
-        </button>
-      </div>
+      <div data-include="assets/partials/header.html"></div>
     </header>
 
-    <main class="section">
-      <div class="container">
+    <main id="main" class="section section--soft">
+      <div class="container" style="margin-top: 158px;">
         <p class="eyebrow">Work</p>
-        <h1 class="h1">Recent projects</h1>
-        <p class="lead max-w-prose">Swap images and captions per client.</p>
+        <h1 class="h1">Portfolio by service</h1>
+        <p class="lead max-w-prose">Browse recent projects across wraps, protection, tinting, and coatings.</p>
 
-        <div class="gallery">
-          <img src="assets/images/g1.jpg" alt="Project photo 1" loading="lazy" />
-          <img src="assets/images/g2.jpg" alt="Project photo 2" loading="lazy" />
-          <img src="assets/images/g3.jpg" alt="Project photo 3" loading="lazy" />
-          <img src="assets/images/g4.jpg" alt="Project photo 4" loading="lazy" />
-          <img src="assets/images/g5.jpg" alt="Project photo 5" loading="lazy" />
-          <img src="assets/images/g6.jpg" alt="Project photo 6" loading="lazy" />
-        </div>
+        <section class="gallery-section">
+          <div class="gallery-section__head">
+            <h2 class="h2">Vinyl Wrapping</h2>
+            <p class="muted">Custom finishes, branded fleets, and specialty installations.</p>
+          </div>
+
+          <div class="gallery-subsection">
+            <div class="gallery-subsection__head">
+              <h3 class="h3">Commercial</h3>
+            </div>
+            <div class="gallery-carousel" data-gallery>
+              <div class="gallery-carousel__controls">
+                <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+                <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+              </div>
+              <div class="gallery-carousel__viewport">
+                <div class="gallery-carousel__track">
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_01.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_06.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_09.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_02.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_03.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_04.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_05.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_07.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_08.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/commercial-wraps_10.jpg" alt="Commercial wrap project" loading="lazy" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-subsection">
+            <div class="gallery-subsection__head">
+              <h3 class="h3">Custom Stripes</h3>
+            </div>
+            <div class="gallery-carousel" data-gallery>
+              <div class="gallery-carousel__controls">
+                <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+                <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+              </div>
+              <div class="gallery-carousel__viewport">
+                <div class="gallery-carousel__track">
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_01.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_06.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_07.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_02.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_03.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_04.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_05.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_08.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-stripe-wraps_09.jpg" alt="Custom stripe design" loading="lazy" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-subsection">
+            <div class="gallery-subsection__head">
+              <h3 class="h3">Custom Wraps</h3>
+            </div>
+            <div class="gallery-carousel" data-gallery>
+              <div class="gallery-carousel__controls">
+                <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+                <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+              </div>
+              <div class="gallery-carousel__viewport">
+                <div class="gallery-carousel__track">
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_18.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_08.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_14.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_17.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_19.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_20.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_15.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_16.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_01.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_03.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_04.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_05.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_06.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_07.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_02.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_09.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_10.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_11.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_12.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/custom-wraps_13.jpg" alt="Custom vinyl wrap" loading="lazy" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-subsection">
+            <div class="gallery-subsection__head">
+              <h3 class="h3">Emergency Vehicles</h3>
+            </div>
+            <div class="gallery-carousel" data-gallery>
+              <div class="gallery-carousel__controls">
+                <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+                <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+              </div>
+              <div class="gallery-carousel__viewport">
+                <div class="gallery-carousel__track">
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_01.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_04.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_11.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_02.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_03.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_05.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_06.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_07.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_08.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_09.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_10.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_12.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_13.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_14.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_15.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_16.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/emergency-vehicle-wraps_17.jpg" alt="Emergency vehicle wrap" loading="lazy" /></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-subsection">
+            <div class="gallery-subsection__head">
+              <h3 class="h3">Luxury Vehicles</h3>
+            </div>
+            <div class="gallery-carousel" data-gallery>
+              <div class="gallery-carousel__controls">
+                <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+                <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+              </div>
+              <div class="gallery-carousel__viewport">
+                <div class="gallery-carousel__track">
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_01.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_11.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_28.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_02.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_03.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_04.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_05.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_06.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_07.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_08.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_09.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_10.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_12.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_13.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_14.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_15.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_16.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_17.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_18.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_19.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_20.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_21.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_22.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_23.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_24.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_25.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_26.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_27.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                  <div class="gallery-carousel__item"><img src="assets/images/gallery/wraps/luxury-wraps_29.jpg" alt="Luxury vehicle wrap" loading="lazy" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section">
+          <div class="gallery-section__head">
+            <h2 class="h2">Paint Protection Film (PPF)</h2>
+            <p class="muted">Gloss, satin, and self-healing protection for daily drivers and collectors.</p>
+          </div>
+          <div class="gallery-carousel" data-gallery>
+            <div class="gallery-carousel__controls">
+              <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+              <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+            </div>
+            <div class="gallery-carousel__viewport">
+              <div class="gallery-carousel__track">
+                <div class="gallery-carousel__item"><img src="assets/images/g1.jpg" alt="PPF-covered vehicle" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/g2.jpg" alt="PPF finish close-up" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/g3.jpg" alt="PPF installation detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/g4.jpg" alt="PPF protection project" loading="lazy" /></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section">
+          <div class="gallery-section__head">
+            <h2 class="h2">Window Tinting</h2>
+            <p class="muted">Heat reduction, privacy, and clean ceramic film installs.</p>
+          </div>
+          <div class="gallery-carousel" data-gallery>
+            <div class="gallery-carousel__controls">
+              <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+              <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+            </div>
+            <div class="gallery-carousel__viewport">
+              <div class="gallery-carousel__track">
+                <div class="gallery-carousel__item"><img src="assets/images/tint_stock.jpg" alt="Tinted window installation" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/g4.jpg" alt="Window tint close-up" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/g5.jpg" alt="Tinted vehicle" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/g6.jpg" alt="Tinted luxury vehicle" loading="lazy" /></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section">
+          <div class="gallery-section__head">
+            <h2 class="h2">Ceramic Coating</h2>
+            <p class="muted">Long-lasting gloss and protection for paint, trim, and glass.</p>
+          </div>
+          <div class="gallery-carousel" data-gallery>
+            <div class="gallery-carousel__controls">
+              <button class="gallery-carousel__btn" type="button" data-dir="prev" aria-label="Show previous images">←</button>
+              <button class="gallery-carousel__btn" type="button" data-dir="next" aria-label="Show next images">→</button>
+            </div>
+            <div class="gallery-carousel__viewport">
+              <div class="gallery-carousel__track">
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_01.jpg" alt="Ceramic coating application" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_06.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_07.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_08.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_02.jpg" alt="Ceramic coated vehicle" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_09.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_04.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_10.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_11.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_12.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_13.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_14.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_15.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_05.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_16.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_17.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_18.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_19.jpg" alt="Ceramic coating detail" loading="lazy" /></div>
+                <div class="gallery-carousel__item"><img src="assets/images/gallery/ceramic-coating/ceramic-coating_03.jpg" alt="Shiny ceramic-coated finish" loading="lazy" /></div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <div>
-          <p class="footer-title">Business Name</p>
-          <p class="muted text-sm">© <span id="year"></span></p>
-        </div>
-        <div class="footer-actions">
-          <a class="btn btn--primary btn--sm" href="contact.html">Request Quote</a>
-        </div>
-      </div>
-    </footer>
+    <div data-include="assets/partials/footer.html"></div>
 
+    <script src="assets/scripts/config.js"></script>
     <script src="assets/scripts/script.js"></script>
   </body>
 </html>
