@@ -82,6 +82,149 @@ function wireHeaderScroll() {
   window.addEventListener("scroll", update, { passive: true });
 }
 
+function initGalleryCarousels() {
+  const carousels = document.querySelectorAll(".gallery-carousel");
+  if (!carousels.length) return;
+
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector(".gallery-carousel__track");
+    const prevButton = carousel.querySelector('[data-dir="prev"]');
+    const nextButton = carousel.querySelector('[data-dir="next"]');
+    const viewport = carousel.querySelector(".gallery-carousel__viewport");
+
+    if (!track || !prevButton || !nextButton) return;
+
+    const items = Array.from(track.children);
+    if (!items.length) return;
+
+    let currentIndex = 0;
+
+    const getGap = () => {
+      const computed = getComputedStyle(track);
+      return parseFloat(computed.columnGap || computed.gap || 0) || 0;
+    };
+
+    const getVisibleCount = () => {
+      const firstItem = items[0];
+      if (!firstItem || !viewport) return 1;
+
+      const viewportWidth = viewport.clientWidth || track.clientWidth || 0;
+      const firstItemWidth = firstItem.getBoundingClientRect().width || 0;
+      const gap = getGap();
+
+      if (!viewportWidth || !firstItemWidth) return 1;
+
+      const visible = Math.max(1, Math.min(items.length, Math.floor((viewportWidth + gap) / (firstItemWidth + gap))));
+      return visible;
+    };
+
+    const getOffset = () => {
+      const firstItem = items[0];
+      if (!firstItem) return 0;
+
+      const firstItemWidth = firstItem.getBoundingClientRect().width || 0;
+      return firstItemWidth + getGap();
+    };
+
+    const updateButtons = () => {
+      const maxIndex = Math.max(0, items.length - getVisibleCount());
+      prevButton.disabled = currentIndex <= 0;
+      nextButton.disabled = currentIndex >= maxIndex;
+    };
+
+    const moveTo = (index) => {
+      const maxIndex = Math.max(0, items.length - getVisibleCount());
+      currentIndex = Math.max(0, Math.min(index, maxIndex));
+      track.style.transform = `translateX(-${currentIndex * getOffset()}px)`;
+      updateButtons();
+    };
+
+    prevButton.addEventListener("click", () => moveTo(currentIndex - 1));
+    nextButton.addEventListener("click", () => moveTo(currentIndex + 1));
+    window.addEventListener("resize", () => moveTo(currentIndex));
+
+    moveTo(0);
+  });
+}
+
+function initImageLightbox() {
+  const galleryImages = Array.from(document.querySelectorAll(".gallery img, .gallery-carousel__item img, .gallery-section img, .gallery-subsection img"));
+  if (!galleryImages.length) return;
+
+  let activeIndex = -1;
+  let lightbox = document.querySelector(".image-lightbox");
+  if (!lightbox) {
+    lightbox = document.createElement("div");
+    lightbox.className = "image-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.innerHTML = `
+      <button class="image-lightbox__close" type="button" aria-label="Close image">×</button>
+      <img class="image-lightbox__image" alt="" />
+    `;
+    document.body.appendChild(lightbox);
+  }
+
+  const lightboxImage = lightbox.querySelector(".image-lightbox__image");
+  const closeButton = lightbox.querySelector(".image-lightbox__close");
+
+  const showImage = (index) => {
+    if (!galleryImages.length) return;
+
+    activeIndex = (index + galleryImages.length) % galleryImages.length;
+    const img = galleryImages[activeIndex];
+    const source = img.currentSrc || img.src;
+    lightboxImage.src = source;
+    lightboxImage.alt = img.alt || "";
+  };
+
+  const openLightbox = (img) => {
+    activeIndex = galleryImages.indexOf(img);
+    if (activeIndex === -1) activeIndex = 0;
+    showImage(activeIndex);
+    document.body.classList.add("lightbox-open");
+    lightbox.classList.add("is-open");
+  };
+
+  const closeLightbox = () => {
+    document.body.classList.remove("lightbox-open");
+    lightbox.classList.remove("is-open");
+    lightboxImage.removeAttribute("src");
+    lightboxImage.alt = "";
+  };
+
+  galleryImages.forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", (event) => {
+      event.preventDefault();
+      openLightbox(img);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (!lightbox.classList.contains("is-open")) {
+      if (event.key === "Escape") closeLightbox();
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeLightbox();
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showImage(activeIndex + 1);
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showImage(activeIndex - 1);
+    }
+  });
+}
+
 function loadAosLibrary() {
   return new Promise((resolve, reject) => {
     if (window.AOS) {
@@ -192,6 +335,8 @@ function applyAosAnimations() {
   applyYear();
   wireNav();
   wireHeaderScroll();
+  initGalleryCarousels();
+  initImageLightbox();
   await loadAosLibrary();
   applyAosAnimations();
   if (typeof wireScrollSheen === "function") {
