@@ -82,6 +82,85 @@ function wireHeaderScroll() {
   window.addEventListener("scroll", update, { passive: true });
 }
 
+function loadAosLibrary() {
+  return new Promise((resolve, reject) => {
+    if (window.AOS) {
+      resolve();
+      return;
+    }
+
+    const existingCss = document.querySelector('link[href*="aos.css"]');
+    if (!existingCss) {
+      const css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = "https://unpkg.com/aos@2.3.4/dist/aos.css";
+      document.head.appendChild(css);
+    }
+
+    const existingScript = document.querySelector('script[src*="aos.js"]');
+    if (existingScript) {
+      if (window.AOS) {
+        resolve();
+        return;
+      }
+      existingScript.addEventListener("load", resolve, { once: true });
+      existingScript.addEventListener("error", reject, { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/aos@2.3.4/dist/aos.js";
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.body.appendChild(script);
+  });
+}
+
+function applyAosAnimations() {
+  if (!window.AOS) return;
+
+  const selectors = [
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "p",
+    "blockquote",
+    "li",
+    ".eyebrow",
+    ".lead",
+    ".muted",
+    ".btn",
+    ".nav__link",
+    ".nav__dropdown-link",
+    ".header__cta",
+    ".hero__content > *",
+    ".section-head",
+    ".card",
+    ".service",
+    ".quote"
+  ];
+
+  const elements = Array.from(document.querySelectorAll(selectors.join(", ")));
+
+  elements.forEach((el, index) => {
+    if (el.hasAttribute("data-aos")) return;
+    el.setAttribute("data-aos", "fade-up");
+    el.setAttribute("data-aos-duration", "550");
+    el.setAttribute("data-aos-delay", String(Math.min(index * 40, 220)));
+  });
+
+  AOS.init({
+    once: true,
+    duration: 550,
+    easing: "ease-out-cubic",
+    offset: 80,
+    mirror: false
+  });
+}
+
 // function wireScrollSheen() {
 //   const aboutSection = document.querySelector(".section--about");
 //   if (!aboutSection) return;
@@ -113,5 +192,9 @@ function wireHeaderScroll() {
   applyYear();
   wireNav();
   wireHeaderScroll();
-  wireScrollSheen();
+  await loadAosLibrary();
+  applyAosAnimations();
+  if (typeof wireScrollSheen === "function") {
+    wireScrollSheen();
+  }
 })();
