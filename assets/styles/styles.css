@@ -71,8 +71,13 @@ a:hover { text-decoration: underline; }
 .section--tight { padding: 3rem 0; }
 .section--soft {
   background: linear-gradient(to bottom, var(--surface-2), #30112b);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  /* border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); */
+}
+.section--soft-top {
+  background: linear-gradient(to top, var(--surface-2), #30112b);
+  /* border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); */
 }
 .section--center {text-align: center;}
 .section--cta {
@@ -89,13 +94,17 @@ a:hover { text-decoration: underline; }
 .section--cta .btn {
   margin-top: 40px;
   color: #fff;
-  background: var(--purple);
+  background-color: var(--purple);
   font-weight: 500;
   padding: 15px 30px;
-  transition: all 0.3s ease;
+  transition: background-color 300ms ease, transform 300ms ease, box-shadow 300ms ease, color 300ms ease;
 }
-.section--cta .btn:hover {
-  font-size: 1rem;
+.section--cta .btn:hover,
+.section--cta .btn:focus {
+  background-color: #4c213a;
+  color: #fff;
+  transform: translateY(-2px) scale(1.035);
+  box-shadow: 0 12px 28px rgba(48, 17, 43, 0.26);
 }
 
 .section--benefits {
@@ -105,6 +114,7 @@ a:hover { text-decoration: underline; }
 .section--about {
   position: relative;
   /* overflow: hidden; */
+  padding-bottom: 1rem !important;
 }
 
 .section--about img {
@@ -224,6 +234,27 @@ a:hover { text-decoration: underline; }
 .section--about .service-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   text-align: center;
+}
+
+.section--about .btn {
+  position: relative;
+  overflow: hidden;
+  color: var(--purple);
+  background: transparent;
+  border: 2px solid var(--purple);
+  font-weight: 800;
+  padding: 0.88rem 1.2rem;
+  box-shadow: 0 0 0 rgba(48, 17, 43, 0);
+  transition: color 300ms ease, transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease, background-color 300ms ease;
+}
+
+.section--about .btn:hover,
+.section--about .btn:focus {
+  color: #fff;
+  background-color: var(--purple);
+  border-color: var(--purple);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(48, 17, 43, 0.30);
 }
 
 /* Grids */
@@ -448,7 +479,7 @@ a:hover { text-decoration: underline; }
   font-weight: 950;
   cursor: pointer;
   user-select: none;
-  transition: transform 120ms ease, opacity 120ms ease;
+  transition: transform 180ms ease, opacity 180ms ease, background-color 300ms ease, color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
 }
 .btn:active { transform: translateY(1px); }
 .btn--sm { padding: 0.55rem 0.85rem; font-size: 0.95rem; }
@@ -459,7 +490,14 @@ a:hover { text-decoration: underline; }
 .btn--outline { border-color: var(--purple); background: transparent; border-width: 2px; }
 .btn--ghost { background: rgba(255,255,255,0.04); border-color: var(--border); }
 .btn--yellow { background-color: var(--yellow-darker); }
-.btn:hover { text-decoration: none; opacity: 0.96; }
+.btn:hover,
+.btn:focus { text-decoration: none; opacity: 1; transform: translateY(-2px) scale(1.025); box-shadow: 0 10px 24px rgba(48, 17, 43, 0.20); }
+.btn--primary:hover,
+.btn--primary:focus { background-color: #4c213a; color: #fff; border-color: #4c213a; }
+.btn--outline:hover,
+.btn--outline:focus { background-color: var(--purple); color: #fff; border-color: var(--purple); }
+.btn--yellow:hover,
+.btn--yellow:focus { background-color: #d89930; color: #30112b; }
 
 /* Hero (image-first, minimal text) */
 .hero {

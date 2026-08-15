@@ -275,7 +275,6 @@ function applyAosAnimations() {
     ".eyebrow",
     ".lead",
     ".muted",
-    ".btn",
     ".nav__link",
     ".nav__dropdown-link",
     ".header__cta",
