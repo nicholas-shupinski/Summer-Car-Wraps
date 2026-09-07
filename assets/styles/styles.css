@@ -7,6 +7,7 @@
 
   --surface: rgba(255, 255, 255, 0.04);
   --surface-2: rgba(255, 255, 255, 0.02);
+  --surface-3: rgba(0, 0, 0, 0.02);
 
   --primary: #c9a46b;
   --primary-2: #a57a3a;
@@ -70,7 +71,7 @@ a:hover { text-decoration: underline; }
 .section { padding: 5rem 0; }
 .section--tight { padding: 3rem 0; }
 .section--soft {
-  background: linear-gradient(to bottom, var(--surface-2), #30112b);
+  background: linear-gradient(to bottom, var(--surface-3), #30112b);
   /* border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border); */
 }
@@ -200,8 +201,8 @@ a:hover { text-decoration: underline; }
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background-image: url("/assets/images/sunburst-pattern.png");
+  bottom: -400px;
+  background-image: url("/assets/images/sunburst-pattern-fade.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.3;
@@ -232,7 +233,7 @@ a:hover { text-decoration: underline; }
 }
 
 .section--about .service-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   text-align: center;
 }
 
@@ -957,7 +958,7 @@ input:focus, textarea:focus { border-color: rgba(201,164,107,0.55); }
 .site-footer { border-top: 1px solid var(--border); padding: 2rem 0; padding-bottom: 10px; }
 .site-footer .branding { width: 100%; }
 .site-footer img { max-width: 200px; margin-left: auto; margin-right: auto; margin-bottom: 30px; }
-.site-footer .content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); text-align: center; margin-left: 300px; margin-right: 300px; }
+.site-footer .content { display: grid; grid-template-columns: 1fr; text-align: center; margin: 0 auto; width: min(100% - 2rem, 1120px); }
 .footer-row {
   display: grid;
   grid-template-columns: 1.4fr auto auto;
